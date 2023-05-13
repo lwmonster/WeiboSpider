@@ -101,6 +101,7 @@ def parse_tweet_info(data):
         "pic_num": data['pic_num'],
         'isLongText': False,
         "user": parse_user_info(data['user']),
+        "comments": [],
     }
     if 'page_info' in data and data['page_info'].get('object_type', '') == 'video':
         tweet['video'] = data['page_info']['media_info']['mp4_720p_mp4']
